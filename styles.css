@@ -397,3 +397,9 @@ Text
     width: 35%;
   }
 }
+
+@media(max-width: 995px){
+  .menu{
+    display: none;
+  }
+}
