@@ -1,6 +1,6 @@
 let menu_activator_obj = document.getElementById('small-menu-activator');
 addEventListener('click',switchEvent);
-addEventListener('touchend',displayMenu);
+addEventListener('touchend',switchEvent);
 
 
 function switchEvent(e){
@@ -19,8 +19,6 @@ function displayMenu(e){
   console.log(e);
   console.log(window.getComputedStyle(menu, null).display);
   let style = window.getComputedStyle(menu, null).display;
-
-
   if (style == "none"){
     menu.className =  "menu menu-lg menu-sm display_menu";
   }else{
