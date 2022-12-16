@@ -1,16 +1,29 @@
 let menu_activator_obj = document.getElementById('small-menu-activator');
-addEventListener('click',displayMenu);
+addEventListener('click',switchEvent);
 addEventListener('touchend',displayMenu);
 
-function displayMenu(){
+
+function switchEvent(e){
+  switch(e.type){
+    case "click":
+    displayMenu(e);
+    break;
+    case "touchend":
+    displayMenu(e);
+    break;
+  }
+}
+
+function displayMenu(e){
   let menu = document.getElementById('small-menu');
+  console.log(e);
   console.log(window.getComputedStyle(menu, null).display);
   let style = window.getComputedStyle(menu, null).display;
+
+
   if (style == "none"){
-    console.log("hidden");
     menu.className =  "menu menu-lg menu-sm display_menu";
   }else{
-    console.log("visible");
     menu.className =  "menu menu-lg menu-sm hide_menu";
   }
 }
