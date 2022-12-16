@@ -27,6 +27,12 @@
 
 .header{
   background-color: white;
+  padding: 1rem 2rem 1rem 2rem;
+  border-bottom: 1px solid lightgrey;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0px;
 }
 
 .logo{
@@ -379,12 +385,6 @@ Text
   .header{
     display: flex;
     justify-content: space-around;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid lightgrey;
-    position: fixed;
-    left: 0;
-    right: 0;
   }
 
   .menu-lg{
@@ -413,11 +413,6 @@ Text
   .header{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border-bottom: 1px solid lightgrey;
-    position: fixed;
-    left: 0;
-    right: 0;
-    padding: 1rem 2rem 1rem 2rem;
   }
 
   .logo{
