@@ -1,6 +1,6 @@
 let menu_activator_obj = document.getElementById('small-menu-activator');
-addEventListener('click',switchEvent);
-addEventListener('touchend',switchEvent);
+menu_activator_obj.addEventListener('click',switchEvent);
+menu_activator_obj.addEventListener('touchend',switchEvent);
 
 
 function switchEvent(e){
