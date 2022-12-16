@@ -25,6 +25,10 @@
 
 }
 
+.header{
+  background-color: white;
+}
+
 .logo{
   font-family: papyrus, fantasy;
   color: #D96459;
@@ -365,6 +369,11 @@ Text
 @media(min-width: 996px){
   .main{
     width: 35%;
+    padding-top: 5rem;
+  }
+
+  .project-main{
+    padding-top: 5rem;
   }
 
   .header{
@@ -373,6 +382,9 @@ Text
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid lightgrey;
+    position: fixed;
+    left: 0;
+    right: 0;
   }
 
   .menu-lg{
@@ -397,8 +409,48 @@ Text
 }
 
 @media(max-width: 995px){
-  .menu-sm .menu-item-sm{
+
+  .header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid lightgrey;
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem 1rem 2rem;
+  }
+
+  .logo{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .menu-icon-sm{
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .menu-sm{
     display: none;
+  }
+
+  .display_menu{
+    display: grid;
+    grid-gap: 1rem;
+    background-color: grey;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    list-style: none;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: left;
+    margin-top: 0px;
+  }
+
+  .hide_menu{
+    display:none;
   }
 
   .a-menu-sm{
@@ -406,26 +458,13 @@ Text
     color: white;
   }
 
-  .menu-sm{
-    list-style: none;
-    display: grid;
-    font-size: 0.9rem;
-    width: 100%;
-    padding: 0px;
-  }
-
-  .menu-sm:hover .menu-item-sm{
-    display: block;
-    background-color: grey;
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-  }
-
   .menu-icon-sm{
-    background-color: darkgrey;
+    text-align: right;
     color: white;
+  }
+
+  .material-symbols-outlined{
+    background-color: lightgrey;
     border-radius: 2px;
   }
 }
