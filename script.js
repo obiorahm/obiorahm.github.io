@@ -1,5 +1,6 @@
 let menu_activator_obj = document.getElementById('small-menu-activator');
-menu_activator_obj = addEventListener('click',displayMenu);
+addEventListener('click',displayMenu);
+addEventListener('touchend',displayMenu);
 
 function displayMenu(){
   let menu = document.getElementById('small-menu');
