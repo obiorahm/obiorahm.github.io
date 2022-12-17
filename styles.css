@@ -144,6 +144,10 @@ project
   width: 60%
 }
 
+.image-gallery-45{
+  width: 45%
+}
+
 .project-info-wrapper{
   flex: 4;
 
