@@ -16,7 +16,7 @@
 }
 
 /*font-family*/
-.project-description, .project-title, .a-breadcrumbs, .menu, .projects-blurb,
+.project-collaborators, .project-description, .project-title, .a-breadcrumbs, .menu, .projects-blurb,
 .contact-title, .contact-blurb, .section, .section-title, .resume-contact-item{
 
   font-family: Roboto, sans-serif;
@@ -99,10 +99,14 @@ project
   margin-top: 0px;
 }
 
-.project-description{
+.project-collaborators, .project-description{
   margin-top:0px;
   font-size: 0.85rem;
   line-height: 1.2rem;
+}
+
+.project-collaborators{
+  margin-bottom: 0px;
 }
 
 .projects-container{
