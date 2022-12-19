@@ -7,16 +7,16 @@
 
 @font-face {
   font-family: roboto_condensed;
-  src: url(Roboto_Condensed/RobotoCondensed-Regular.ttf);
+  src: url('../font/Roboto_Condensed/RobotoCondensed-Regular.ttf');
 }
 
 @font-face {
   font-family: julius_sans_one;
-  src: url(Julius_Sans_One/JuliusSansOne-Regular.ttf)
+  src: url("../font/Julius_Sans_One/JuliusSansOne-Regular.ttf")format('truetype');
 }
 
 /*font-family*/
-.project-collaborators, .project-description, .project-title, .a-breadcrumbs, .menu, .projects-blurb,
+.demo_button, .project-collaborators, .project-description, .project-title, .a-breadcrumbs, .menu, .projects-blurb,
 .contact-title, .contact-blurb, .section, .section-title, .resume-contact-item{
 
   font-family: Roboto, sans-serif;
@@ -33,6 +33,7 @@
   left: 0;
   right: 0;
   top: 0px;
+  z-index: 100;
 }
 
 .logo{
@@ -64,6 +65,33 @@
   padding-bottom: 1rem;
   color: #353535;
   font-weight: 500;
+  animation-name: move_down_up;
+  animation-duration: 1s;
+}
+
+@keyframes move_down_up {
+  from{
+    position: relative;
+    bottom: -20px;
+  }
+
+  to{
+    position: relative;
+    bottom: 0px;
+  }
+}
+
+
+@keyframes move_left_right {
+  from{
+    position: relative;
+    left: -20px;
+  }
+
+  to{
+    position: relative;
+    left: 0px;
+  }
 }
 
 .publications-body{
@@ -122,7 +150,7 @@ project
   flex-direction: column;
   background-color: #f9f9f9;
   padding-top: 2em;
-  padding-bottom: 2em;
+  /* padding-bottom: 2em; */
   border-radius: 10px;
   box-shadow: 5px 5px 5px lightgrey;
 }
@@ -130,8 +158,47 @@ project
 .project-image-wrapper{
   flex: 1;
   width: 80%;
+  box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+
+  animation-name: move_left_right;
+  animation-duration: 2s;
+
+  transition: transform 0.5s;
+}
+
+.project-image-wrapper:hover{
+  transform: scale(1.1);
+}
+
+.demo_button{
+  display: none;
+}
+
+.project-image-wrapper:hover .demo_button{
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 5em;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid white;
+  padding: 0.4em;
+  border-radius: 0.2em;
+  color: white;
+  font-size: 0.8em;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.demo_button_link{
+  text-decoration: none;
+  color: white;
 }
 
 .multiple-image-wrapper{
@@ -143,18 +210,17 @@ project
   width: 30%;
 }
 
-
 .image-gallery-60{
-  width: 60%
+  width: 60%;
 }
 
 .image-gallery-45{
-  width: 45%
+  width: 45%;
 }
 
 .project-info-wrapper{
   flex: 4;
-
+  padding: 1em;
   display: block;
   width: 80%;
   margin-left: auto;
